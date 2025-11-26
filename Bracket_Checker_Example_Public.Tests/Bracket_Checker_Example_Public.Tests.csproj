@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Bracket_Checker_Eexample_Public\Bracket_Checker_Example_Public.csproj" />
+    <ProjectReference Include="..\Bracket_Checker_Example_Public\Bracket_Checker_Example_Public.csproj" />
     <ProjectReference Include="..\Bracket_Checker_Example_Public\Bracket_Checker_Example_Public.csproj" />
   </ItemGroup>
   
