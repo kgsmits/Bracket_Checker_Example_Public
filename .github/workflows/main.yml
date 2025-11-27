@@ -9,3 +9,6 @@ jobs:
     steps: 
       - run: echo "hello world!"
       
+      - name: Checkout
+        uses: actions/checkout@v6.0.0
+      
