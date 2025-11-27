@@ -6,9 +6,23 @@ on: [push]
 jobs: 
   demo_job:
     runs-on: ubuntu latest
+    strategy:
+      matrix:
+        dotnet-version: [ 10.0.x , 10.0.x ]
     steps: 
       - run: echo "hello world!"
       
       - name: Checkout
         uses: actions/checkout@v6.0.0
+        
+      - name: Setup dotnet ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{matrix.dotnet-version}}
+      - name: Install dependencies
+        run: dotnet add package Newtonsoft.Json --version 12.0.1
+
+      
+      - name: dispaly dotnet version
+        run: dotnet --version
       
